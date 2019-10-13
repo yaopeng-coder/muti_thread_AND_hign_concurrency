@@ -4,7 +4,8 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * 陷入阻塞时，volatile是无法停止线程的，此例中，生产者的速度很快（num<10000满足，太小了不行），消费者慢，所以阻塞队列满了以后，生产者会阻塞，阻塞再storage.put方法中，所以没有办法进入while循环判断
+ * 陷入阻塞时，volatile是无法停止线程的，此例中，生产者的速度很快（num<10000满足，太小了不行），
+ * 消费者慢，所以阻塞队列满了以后，生产者会阻塞，阻塞再storage.put方法中，所以没有办法进入while循环判断
  * @program: muti_thread_AND_hign_concurrency
  * @author: yaopeng
  * @create: 2019-10-12 16:25
