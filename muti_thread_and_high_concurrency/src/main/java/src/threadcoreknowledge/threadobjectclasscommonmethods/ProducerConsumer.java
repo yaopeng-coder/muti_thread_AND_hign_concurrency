@@ -48,7 +48,7 @@ public class ProducerConsumer {
         public void run() {
             for(int i = 0; i<100;i++){
                 synchronized (this){
-                    if(account == 100){
+                    if(account == 3){
                         break;
                     }else{
                     account++;
