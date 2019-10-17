@@ -20,7 +20,7 @@ public class WaitNotifyPrintOddEvenWait {
     }
 
     static class printRunnable implements Runnable{
-        @Override
+
         public void run() {
             while(count < 100){
                 synchronized (lock){

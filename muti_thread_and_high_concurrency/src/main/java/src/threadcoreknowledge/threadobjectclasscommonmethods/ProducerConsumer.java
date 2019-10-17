@@ -44,7 +44,7 @@ public class ProducerConsumer {
             this.account = 0;
         }
 
-        @Override
+
         public void run() {
             for(int i = 0; i<100;i++){
                 synchronized (this){
@@ -68,7 +68,7 @@ public class ProducerConsumer {
             this.storage = storage;
         }
 
-        @Override
+
         public void run() {
             for(int i = 0; i<100;i++){
                 storage.take();
