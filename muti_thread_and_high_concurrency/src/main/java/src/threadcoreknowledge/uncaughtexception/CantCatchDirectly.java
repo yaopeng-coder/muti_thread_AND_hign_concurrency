@@ -11,7 +11,7 @@ public class CantCatchDirectly implements Runnable {
 
     public static void main(String[] args) throws InterruptedException {
 
-        try{
+
             new Thread(new CantCatchDirectly(),"Mythread-0").start();
             Thread.sleep(300);
             new Thread(new CantCatchDirectly(),"Mythread-1").start();
@@ -20,16 +20,18 @@ public class CantCatchDirectly implements Runnable {
             Thread.sleep(300);
             new Thread(new CantCatchDirectly(),"Mythread-3").start();
             Thread.sleep(300);
-        }catch(RuntimeException e){
-            System.out.println("catch exception");
 
-        }
 
 
     }
 
     @Override
     public void run() {
-        throw new RuntimeException();
+
+        try{
+            throw new RuntimeException();
+        }catch(RuntimeException e){
+            System.out.println("catch exception");
+        }
     }
 }
